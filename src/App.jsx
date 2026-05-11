@@ -59,6 +59,7 @@ export default function PortfolioSite() {
     'CSS',
     'JavaScript',
     'Java',
+    'React',
     'Git',
     'Docker',
     'TensorFlow',
