@@ -1,3 +1,22 @@
+import {
+  FaPython,
+  FaReact,
+  FaJava,
+  FaDocker,
+  FaGitAlt,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+} from 'react-icons/fa';
+
+import {
+  SiFlask,
+  SiPostgresql,
+  SiMysql,
+  SiTensorflow,
+  SiKeras,
+} from 'react-icons/si';
+
 export default function PortfolioSite() {
   const projects = [
     {
@@ -51,19 +70,19 @@ export default function PortfolioSite() {
   ];
 
   const skills = [
-    'Python',
-    'Flask',
-    'PostgreSQL',
-    'MySQL',
-    'HTML',
-    'CSS',
-    'JavaScript',
-    'Java',
-    'React',
-    'Git',
-    'Docker',
-    'TensorFlow',
-    'Keras',
+    { name: 'Python', icon: FaPython, color: '#3776AB' },
+    { name: 'Flask', icon: SiFlask, color: '#FFFFFF' },
+    { name: 'PostgreSQL', icon: SiPostgresql, color: '#336791' },
+    { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
+    { name: 'HTML', icon: FaHtml5, color: '#E34F26' },
+    { name: 'CSS', icon: FaCss3Alt, color: '#1572B6' },
+    { name: 'JavaScript', icon: FaJs, color: '#F7DF1E' },
+    { name: 'Java', icon: FaJava, color: '#ED8B00' },
+    { name: 'React', icon: FaReact, color: '#61DAFB' },
+    { name: 'Git', icon: FaGitAlt, color: '#F05032' },
+    { name: 'Docker', icon: FaDocker, color: '#2496ED' },
+    { name: 'TensorFlow', icon: SiTensorflow, color: '#FF6F00' },
+    { name: 'Keras', icon: SiKeras, color: '#D00000' },
   ];
 
   const scrollToSection = (id) => {
@@ -249,14 +268,20 @@ export default function PortfolioSite() {
           </h3>
 
           <div className="flex flex-wrap gap-3 sm:gap-4">
-            {skills.map((skill, index) => (
-              <div
-                key={index}
-                className="px-4 sm:px-5 py-2.5 sm:py-3 text-sm sm:text-base rounded-2xl border border-white/5 bg-[#121826] hover:border-cyan-400/20 hover:bg-[#1d2840] transition duration-300"
-              >
-                {skill}
-              </div>
-            ))}
+            {skills.map((skill, index) => {
+              const Icon = skill.icon;
+              const iconColor = skill.color;
+
+              return (
+                <div
+                  key={index}
+                  className="flex items-center gap-3 px-4 sm:px-5 py-2.5 sm:py-3 text-sm sm:text-base rounded-2xl border border-white/5 bg-[#121826] hover:border-cyan-400/20 hover:bg-[#1d2840] transition duration-300"
+                >
+                  <Icon className="text-lg" style={{ color: iconColor }} />
+                  <span>{skill.name}</span>
+                </div>
+              );
+            })}
           </div>
         </section>
 
