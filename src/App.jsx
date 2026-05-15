@@ -319,7 +319,7 @@ export default function PortfolioSite() {
       </main>
 
       <footer className="border-t border-white/5 py-8 text-center text-zinc-500 text-sm bg-[#0f1729]">
-        © 2026 Bulyk Portfolio. All rights reserved.
+        © 2026 PeuyIO Portfolio. All rights reserved.
       </footer>
     </div>
   );
