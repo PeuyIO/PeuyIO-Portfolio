@@ -106,7 +106,7 @@ export default function PortfolioSite() {
       <header className="fixed top-0 left-0 w-full z-50 bg-[#0f1729]/90 border-b border-white/5 backdrop-blur-xl">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
           <h1 className="text-lg sm:text-2xl font-black tracking-[0.15em] sm:tracking-[0.2em] uppercase bg-gradient-to-r from-cyan-400 to-violet-400 bg-clip-text text-transparent">
-            Bulyk Portfolio
+            PeuyIO Portfolio
           </h1>
 
           <nav className="hidden md:flex gap-4 text-sm text-zinc-400">
